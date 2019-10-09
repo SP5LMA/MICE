@@ -1,0 +1,8 @@
+#!/usr/bin/rarun2
+program=./11-floats
+stdin=/dev/pts/4
+stdout=/dev/pts/4
+
+# run with:
+# tty; sleep 999999	# in another terminal
+# r2 -de dbg.profile=11-floats.rr2 11-floats
