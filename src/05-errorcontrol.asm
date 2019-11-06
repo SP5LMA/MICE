@@ -5,6 +5,9 @@
 ;	./05-errorcontrol
 ; =====================================================
 
+; This training example program is expected to fail 
+; as not all of its conditions are supposed to be met.
+
 %include "include/consts.inc"
 %include "include/syscalls_x86-64.inc"
 
