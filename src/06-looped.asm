@@ -5,10 +5,13 @@
 ;	./06-looped
 ; =====================================================
 
+; Modification so that program analyzes command line argument 
+; and treats it as a number
+
 %include "include/consts.inc"
 %include "include/syscalls_x86-64.inc"
 
-%define	MAXLINES	5
+%define	MAXLINES	9
 
 section .data
 	space:	times MAXLINES		db	' '
@@ -20,7 +23,8 @@ global    _start
 _start:
 	cmp qword [rsp], 2
 	jne quitprogfailure
-	call countchars
+;	call countchars
+	call convertchar
 	call printlines
 	xor	rdi, rdi
 quitprog:
@@ -31,6 +35,23 @@ quitprog:
 quitprogfailure:
 	mov rdi, EXIT_FAILURE
 	jmp quitprog
+
+convertchar:
+	mov rsi, [rsp + 24]
+	cmp byte[rsi +1], 0
+	jne quitprogfailure
+; these two instructions can be replaced with movzx
+;	xor rcx, rcx
+;	mov cl, byte [rsi]
+	movzx rcx, byte [rsi]
+	cmp rcx, 40h
+	jae quitprogfailure
+	cmp rcx, 30h
+	jbe quitprogfailure
+	xor rcx, 30h
+	cmp rcx, MAXLINES
+	ja quitprogfailure
+	ret
 
 ; count number of characters in string
 ; given in command line
