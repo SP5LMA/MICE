@@ -13,7 +13,7 @@ extern scanf
 section .data
     queryinfo:		db "Please enter temperature in Celsius:",10,0
     queryformat:		db "%lf",0
-    results:			db "%.2lf'C =  %.2f K = %.2lf'F",10,0
+    results:			db "%.2lf'C =  %.2lf K = %.2lf'F",10,0
     toosmallerror:	db "Error: provided value is too small.",10,0
     align 16
     absolutezero:	dq -273.15
