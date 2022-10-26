@@ -1,6 +1,6 @@
 ; =====================================================
 ; To assemble and run:
-;	nasm -felf64 06-looped.asm -o 06-looped.o
+;	nasm -felf64 -gdwarf 06-looped.asm
 ;	ld 06-looped.o -o 06-looped
 ;	./06-looped
 ; =====================================================

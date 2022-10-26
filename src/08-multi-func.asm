@@ -1,6 +1,6 @@
 ; =====================================================
 ; To assemble and run:
-;	nasm -felf64 08-multi-func.asm -o 08-multi-func.o
+;	nasm -felf64 -gdwarf 08-multi-func.asm -o 08-multi-func.o
 ; =====================================================
 
 %include "include/consts.inc"

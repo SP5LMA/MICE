@@ -1,6 +1,6 @@
 ; =====================================================
 ; To assemble and run:
-;	nasm -felf64 04-functions.asm -o 04-functions.o
+;	nasm -felf64 -gdwarf 04-functions.asm
 ;	ld 04-functions.o -o 04-functions
 ;	./04-functions
 ; =====================================================

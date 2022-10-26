@@ -1,6 +1,6 @@
 ; =====================================================
 ; To assemble and run:
-;   nasm -felf64 10-factorialfun.asm -o 10-factorialfun.o
+;   nasm -felf64 -gdwarf  10-factorialfun.asm
 ;   gcc 10-testfactorialfun.c 10-factorialfun.o  -o 10-factorialfun
 ;   ./10-factorialfun
 ; =====================================================

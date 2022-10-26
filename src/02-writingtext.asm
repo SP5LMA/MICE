@@ -1,6 +1,6 @@
 ; =====================================================
 ; To assemble and run:
-;	nasm -felf64 02-writingtext.asm -o 02-writingtext.o
+;	nasm -felf64 -gdwarf 02-writingtext.asm
 ;	ld 02-writingtext.o -o 02-writingtext
 ;	./02-writingtext
 ; =====================================================

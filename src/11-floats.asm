@@ -1,6 +1,6 @@
 ; =====================================================
 ; To assemble and run:
-;	nasm -felf64 11-floats.asm -o 11-floats.o
+;	nasm -felf64 -gdwarf  11-floats.asm
 ;	ld 11-floats.o -o 11-floats -lc --dynamic-linker=/lib64/ld-linux-x86-64.so.2 
 ;	./11-floats
 ; =====================================================
