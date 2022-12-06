@@ -1,6 +1,6 @@
 ; =====================================================
 ; To assemble and run:
-;	nasm -felf64 03-interact.asm -o 03-interact.o
+;	nasm -felf64 -gdwarf 03-interact.asm
 ;	ld 03-interact.o -o 03-interact
 ;	./03-interact
 ; =====================================================

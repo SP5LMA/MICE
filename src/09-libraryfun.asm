@@ -1,6 +1,6 @@
 ; =====================================================
 ; To assemble and run:
-;	nasm -felf64 09-libraryfun.asm -o 09-libraryfun.o
+;	nasm -felf64 -gdwarf  09-libraryfun.asm
 ;	ld 09-libraryfun.o -o 09-libraryfun -lc --dynamic-linker /lib64/ld-linux-x86-64.so.2
 ;	./09-libraryfun
 ; =====================================================

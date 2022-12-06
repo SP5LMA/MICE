@@ -1,6 +1,6 @@
 ; =====================================================
 ; To assemble and run:
-;	nasm -felf64 08-multi-main.asm -o 08-multi-main.o
+;	nasm -felf64 -gdwarf 08-multi-main.asm -o 08-multi-main.o
 ;	ld 08-multi-main.o 08-multi-func.o -o 08-multi
 ;	./08-multi
 ; =====================================================

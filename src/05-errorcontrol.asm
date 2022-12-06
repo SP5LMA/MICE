@@ -1,6 +1,6 @@
 ; =====================================================
 ; To assemble and run:
-;	nasm -felf64 05-errorcontrol.asm -o 05-errorcontrol.o
+;	nasm -felf64 -gdwarf 05-errorcontrol.asm
 ;	ld 05-errorcontrol.o -o 05-errorcontrol
 ;	./05-errorcontrol
 ; =====================================================

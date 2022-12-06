@@ -1,6 +1,6 @@
 ; =====================================================
 ; To assemble and run:
-;	nasm -felf64 11-floats.asm -o 11-floats.o
+;	nasm -felf64 -gdwarf  11-floats.asm
 ;	ld 11-floats.o -o 11-floats -lc --dynamic-linker=/lib64/ld-linux-x86-64.so.2 
 ;	./11-floats
 ; =====================================================
@@ -12,8 +12,8 @@ extern scanf
 
 section .data
     queryinfo:		db "Please enter temperature in Celsius:",10,0
-    queryformat:	db "%lf",0
-    results:		db "%.2lf'C =  %.2lf K = %.2lf'F",10,0
+    queryformat:		db "%lf",0
+    results:			db "%.2lf'C =  %.2lf K = %.2lf'F",10,0
     toosmallerror:	db "Error: provided value is too small.",10,0
     align 16
     absolutezero:	dq -273.15

@@ -1,6 +1,6 @@
 ; =====================================================
 ; To assemble and run:
-;	nasm -felf64 07-hasher.asm -o 07-hasher.o
+;	nasm -felf64 -gdwarf 07-hasher.asm
 ;	ld 07-hasher.o -o 07-hasher
 ;	./07-hasher
 ; =====================================================

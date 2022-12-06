@@ -1,6 +1,6 @@
 ; =====================================================
 ; To assemble and run:
-;	nasm -felf64 01-starter.asm -o 01-starter.o
+;	nasm -felf64 01-starter.asm
 ;	ld 01-starter.o -o 01-starter
 ;	./01-starter
 ; =====================================================
