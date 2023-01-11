@@ -10,11 +10,11 @@ global factorial
 section .text
 factorial:
     cmp rdi, 0
-    jne expnotzero
+    jne loopversion
     mov eax, 1
     ret
 
-expnotzero:
+loopversion:
     mov eax, 1
 loopfactorial:
     mul rdi
@@ -24,6 +24,24 @@ loopfactorial:
     jnz loopfactorial
     ret
 
+recursiveversion:
+    xor rsi, rsi
+    inc rsi
+    xor rax, rax
+    inc rax   
+    xor rdx, rdx
+expnotzerorecursion:
+    cmp rdi, rsi
+    jb  donerecursion
+    mul rsi
+    cmp rdx, 0
+    jnz overflow
+    inc rsi
+    call expnotzerorecursion
+donerecursion:
+    ret
+
 overflow:
-	xor rax, rax
-	ret
+    xor rax, rax
+    ret
+
