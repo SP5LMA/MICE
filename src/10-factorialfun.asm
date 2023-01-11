@@ -9,7 +9,7 @@ global factorial
 
 section .text
 factorial:
-    jmp recursivefactorial
+;    jmp recursivefactorial
     cmp rdi, 0
     jne loopversion
     mov eax, 1
