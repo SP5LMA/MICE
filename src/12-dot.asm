@@ -1,6 +1,6 @@
 ; =====================================================
 ; To assemble and run:
-;	nasm -felf64 -gdwarf 11-floats.asm
+;	nasm -felf64 11-floats.asm -o 11-floats.o
 ;	ld 11-floats.o -o 11-floats -lc --dynamic-linker=/lib64/ld-linux-x86-64.so.2 
 ;	./11-floats
 ; =====================================================
@@ -26,7 +26,7 @@ section .text
 global _start
 _start:
     movaps xmm0, [vec1]
-    call prepvecv1 ; expand xmm0 to xmm[0-4] 
+    call prepvecv3 ; expand xmm0 to xmm[0-4] 
     call printvec  ; and print as (doubles)
 
     movaps xmm0, [vec2]
@@ -88,6 +88,17 @@ prepvecv2:
     movaps xmm1, xmm0 ; copy
     shufps xmm1, xmm1, 0x4e ; swap (xmm1 done)
     ret
+
+prepvecv3:
+	movaps xmm2, xmm0
+	cvtps2pd xmm0, xmm0
+	movapd xmm1, xmm0
+	shufps xmm1, xmm1, 0x4e
+	shufps xmm2, xmm2, 0x4e
+	cvtps2pd xmm2, xmm2
+	movapd xmm3, xmm2
+	shufps xmm3, xmm3, 0x4e
+	ret
 
 printvec:
     push rbp
