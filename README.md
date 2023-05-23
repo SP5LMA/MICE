@@ -15,6 +15,9 @@ List of exemplary codes in order of discussion.
 1. loops.s - examples of loops
 1. rhyme-while-do.s - simple while loop with changing text
 1. rhyme-do-while.s - do-while loop with example of post-indexing
+1. libtest.s - test compilation with dynamic library
+1. hello.s - interaction using libc
+1. getdents.s - obtain and traverse more complex data structure
 1. basicalu.s - examples of basic arithmetic
 
 # Proposed exercise scenario
@@ -46,6 +49,38 @@ is counted automatically during compilation? Implement such
 modification.
 Add more verses to prove the above change was implemented properly.
 Change loop from up-counting do down-counting.
+
+ * libtest.s
+
+Try to compile libtest as usual.
+
+What is the meaning of these error messages? Explain using references to the code.
+
+Improve compilation with linking against C library. Does it help to compile? Does the program work?
+
+Improve compilation by using dynamic linker against linux shared library. What new features can be observed in this program using tools such as file, nm, readelf?
+
+ * hello.s
+
+Properly compile hello.s and test the program.
+
+Does the buffer has enough size? Why do you think so?
+
+Make the program greet user using formatting string labeled "hello" and the user name that was entered.
+
+Using existing code as an example add another question. Its answer should be stored in a buffer adjacent to "username". Show buffer usage when entered strings use as many characters as it may be expected.
+
+Improve the code to avoid buffer overflows.
+
+ * getdents.s
+
+Test the program and analyze data structure obtained using getdents function.
+
+Consult getdents manual to understand getdents data structure.
+
+Improve output of the program so that it will print i-node from getdents structure.
+
+Improve output of the program so that it will print type of the file (8 = regular file, 4 = directory and so on). Consult /usr/include/dirent.h and values DT_ defined there for further improvement.
 
 # GDB usage
 I recommend installing [dashboard] to make usage of GDB more efficient.

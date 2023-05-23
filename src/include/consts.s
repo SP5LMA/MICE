@@ -49,6 +49,7 @@
 .set O_TRUNC,    01000
 .set O_APPEND,   02000
 .set O_NONBLOCK, 04000
+.set O_DIRECTORY, 040000
 
 /*
  * File location
