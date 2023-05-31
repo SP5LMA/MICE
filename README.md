@@ -19,6 +19,8 @@ List of exemplary codes in order of discussion.
 1. hello.s - interaction using libc
 1. getdents.s - obtain and traverse more complex data structure
 1. basicalu.s - examples of basic arithmetic
+1. factorial.s - factorial function
+1. factest.s - main program to test factorial function
 
 # Proposed exercise scenario
 
@@ -74,13 +76,21 @@ Improve the code to avoid buffer overflows.
 
  * getdents.s
 
-Test the program and analyze data structure obtained using getdents function.
+Test the program and analyze data structure obtained from getdents function.
 
 Consult getdents manual to understand getdents data structure.
 
 Improve output of the program so that it will print i-node from getdents structure.
 
-Improve output of the program so that it will print type of the file (8 = regular file, 4 = directory and so on). Consult /usr/include/dirent.h and values DT_ defined there for further improvement.
+Improve output of the program so that it will print type of the file (8 is for "regular" file, 4 is for "directory" and so on). Consult /usr/include/dirent.h and values DT_ defined there for further improvement.
+
+ * factorial.s and factest.s
+
+Functions are in factorial.s while factest.s is a helper program to test them. 
+
+Analyze factorial function. Test it against extreme cases using the helper program and improve the function within your capabilities.
+
+Write and test a function that will sum results of 1 000 000/n! for n in range from 0 to 10. Constant numeratorD is already declared in .data section, use it. Why using n > 9 is pointless in this case? Can you improve resolution of the result?
 
 # GDB usage
 I recommend installing [dashboard] to make usage of GDB more efficient.
