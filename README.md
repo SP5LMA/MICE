@@ -92,6 +92,22 @@ Analyze factorial function. Test it against extreme cases using the helper progr
 
 Write and test a function that will sum results of 1 000 000/n! for n in range from 0 to 10. Constant numeratorD is already declared in .data section, use it. Why using n > 9 is pointless in this case? Can you improve resolution of the result?
 
+ * addfloats.s
+
+Simple example of FPU operation.
+Using GDB and step-by-step execution observe changes in registers.
+
+ * muldoubles.s
+
+Simple example of FPU operation.
+Using GDB and step-by-step execution observe changes in registers.
+
+ * escape.s
+
+A toy program that for celestial body parameters given in .data section
+calculates escape velocity from it.
+Modify the program so that it will provide result in [km/s].
+
 # GDB usage
 I recommend installing [dashboard] to make usage of GDB more efficient.
 

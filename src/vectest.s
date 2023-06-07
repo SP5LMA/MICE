@@ -13,15 +13,15 @@
 .global _start
 _start:
 	ldr r0, =vec1F
+	vld1.32 {d0-d1}, [r0]
+
 	ldr r1, =vec2F
+	vld1.32 {d2-d3}, [r1]
 	
-	vld1.32 {d0-d3}, [r0]
-	vld1.32 {d4-d7}, [r1]
-	
-	vmul.f32 q0, q0, q2
+	vmul.f32 q0, q0, q1
 	
 	ldr r2, =vecOut
-	vst1.32 {d0-d3}, [r2]
+	vst1.32 {d0-d1}, [r2]
     
 	mov r0, #EXIT_SUCCESS
 	mov r7, #sys_exit
