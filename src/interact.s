@@ -1,3 +1,5 @@
+.arch armv7a
+
 .include "include/syscalls-eabi.s"
 .include "include/consts.s"
 
@@ -13,8 +15,12 @@
 	.equ usernamelen, . -username
 
 .text
-.global _start
-_start:
+.global main
+.syntax unified
+.thumb
+.thumb_func
+.type main,%function
+main:
 	mov	r0, #STDOUT
 	ldr	r1, =hello
 	mov	r2, #hellolen

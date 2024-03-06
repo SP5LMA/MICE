@@ -1,10 +1,16 @@
+.arch armv7a
+
 .data
 	hello: .ascii "Salut, Mundi!\n"
 	.equ hellolen, . -hello
 
 .text
-.global _start
-_start:
+.global main
+.syntax unified
+.thumb
+.thumb_func
+.type main,%function
+main:
 	mov	r0, #1
 	ldr	r1, =hello
 	mov	r2, #14

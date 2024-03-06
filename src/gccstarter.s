@@ -1,9 +1,9 @@
 .arch armv7a
-.syntax unified
-.thumb
 
 .text
 .global main
+.syntax unified
+.thumb
 .thumb_func
 .type main,%function
 main:
