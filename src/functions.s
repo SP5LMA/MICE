@@ -11,8 +11,13 @@
 	sysinfobuf: .space SYSINFOLEN
 
 .text
-.global _start
-_start:
+.align	2
+.global	main
+.syntax unified
+.thumb
+.type	main, %function
+.thumb_func
+main:
 	bl prepareinfo
 	bl createfile
 	bl writeinfo
