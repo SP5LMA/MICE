@@ -6,8 +6,13 @@
 	.set arrayend, . 
 	
 .text
-.global _start
-_start:
+.align	2
+.global	main
+.syntax unified
+.thumb
+.type	main, %function
+.thumb_func
+main:
 
 
 

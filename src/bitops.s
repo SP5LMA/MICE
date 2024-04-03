@@ -6,8 +6,13 @@
 	.equ testmsglen, . -testmsg
 
 .text
-.global _start
-_start:
+.align	2
+.global	main
+.syntax unified
+.thumb
+.type	main, %function
+.thumb_func
+main:
 	ldr r1, =testmsg
 	ldr r0, [r1]
 	orrs r0, #0x21
