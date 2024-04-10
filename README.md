@@ -33,6 +33,12 @@ execution of Boolean operations.
 
 Revise various loop structures.
 
+ * title.s
+
+Analyze function title and its loop. Observe conditional branches.
+Observe workings of stack, how memory is populated.
+Write function islower that checks if provided value represents lowercase letter.
+
  * rhyme-while-do.s
 
 Increase number of iterations (add more verses).
