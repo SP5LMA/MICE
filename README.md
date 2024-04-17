@@ -13,6 +13,7 @@ List of exemplary codes in order of discussion.
 1. functions-errorcontrol.s - add error control to other syscalls
 1. bitops.s - experiment with different values, practice memory and registers examination
 1. loops.s - examples of loops
+1. title.s - Makes A Piece Of Text Looking More Like A Title
 1. rhyme-while-do.s - simple while loop with changing text
 1. rhyme-do-while.s - do-while loop with example of post-indexing
 1. libtest.s - test compilation with dynamic library
@@ -24,10 +25,43 @@ List of exemplary codes in order of discussion.
 
 # Proposed exercise scenario
 
+ * starter.s
+
+Simply to test the toolchain and compilation, linking stages.
+
+ * uglywrite.s
+
+Compile, link and make the program run. Modify the code and observe
+outcome. Test it with debugger to see what does it do.
+
+ * cleanwrite.s
+
+Analyze the code, figure out what are other functions provided by
+the kernel. Investigate manuals for C functions corresponding to
+kernel functions.
+
+ * interact.s
+
+Analyze the first interactive program in the command line and by using
+debugger. Adapt the program so that it "asks" different question. Expand
+it with another question using additional variables and constant
+strings.
+
+ * functions.s
+
+Examine usage of functions using debugger. Determine what data does it
+provide.
+
+ * function-errorcontrol.s
+
+Identify differences between this and previous codes. Develop a plan to
+make this application "crash". Evaluate boundary conditions at which
+error control takes place using debugger.
+
  * bitops.s
 
-Revise instructions. Add your own test cases. Analyze flags after
-execution of Boolean operations.
+Revise instructions. Adapt the code with your own test cases. Analyze
+flags after execution of Boolean operations.
 
  * loops.s
 
@@ -35,9 +69,13 @@ Revise various loop structures.
 
  * title.s
 
-Analyze function title and its loop. Observe conditional branches.
-Observe workings of stack, how memory is populated.
-Write function islower that checks if provided value represents lowercase letter.
+Analyze function title and its main loop. Observe conditional branches.
+Observe workings of stack, how memory is populated. Develop function
+islower that checks if provided value represents lowercase character.
+Discuss whether is it better to modyfy text character by character or
+would it be better to modify more characters at a time. Propose an
+upgrade to the function so that particular words (e.g.: a, the) are not
+made uppercase.
 
  * rhyme-while-do.s
 
