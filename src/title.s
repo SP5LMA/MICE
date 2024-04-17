@@ -42,7 +42,7 @@ print:
 /* 
  * Procedure capitalizes characters in string in title-like style
  * r0 - address of (pointer to) string
- * r1 - scan at most number of characters
+ * r1 - scan at most this number of characters
  */
 title:
 	push {r4 - r12, lr}
@@ -52,26 +52,38 @@ _scannextchar:
 	// finish if number of chars reached
 	movs r1, r1
 	beq _fintitle
+
+    // one less characters to analyze
 	sub r1, #1
-	// store previous char in r3
+
+    // store previous char in r3
 	mov r3, r2
+
 	// get current char to r2
 	ldrb r2, [r0], #1
-	// finish if reached zero of ASCIIZ
+
+	// finish if reached character zero - ASCIIZ
 	movs r2, r2
 	beq _fintitle
+
 	// check if previous char was space
 	cmp r3, #' '
 	bne _scannextchar
-	// skip if this is not a small letter
+
+	// skip if this is below small letter set
 	cmp r2, #'a'
 	blo _scannextchar
+    // skip if this is above small letter set
 	cmp r2, #'z'
 	bhi _scannextchar
+
 	// capitalize character and store it back to mem
 	and r2, #0xdf
 	strb r2, [r0, #-1]
+
+    // rinse and repeat
 	b _scannextchar
+
 _fintitle:
 	pop {r4 - r12, lr}
 	bx lr
@@ -79,7 +91,7 @@ _fintitle:
 /*
  * Function checks for a lowercase character
  * r0 - character to check
- * The returned value is nonzero if the character is lower.
+ * The returned value is nonzero if the character is lower case.
  */
 islower:
 	push {r4 - r12, lr}
