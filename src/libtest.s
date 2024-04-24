@@ -4,8 +4,12 @@
 	hello: .asciz "Salut, Mundi!\n"
 
 .text
-.global _start
-_start:
+.global	main
+.syntax unified
+.thumb
+.type	main, %function
+.thumb_func
+main:
 	ldr r0, =hello
 	bl printf
 	
