@@ -1,3 +1,4 @@
+.arch armv7a
 .text
 .global _start
 _start:

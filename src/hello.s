@@ -1,3 +1,4 @@
+.arch armv7a
 .include "include/consts.s"
 
 .equ USERNAMELEN, 7

@@ -1,3 +1,4 @@
+.arch armv7a
 .include "include/syscalls-eabi.s"
 .include "include/consts.s"
 

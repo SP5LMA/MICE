@@ -1,3 +1,4 @@
+.arch armv7a
 .include "include/consts.s"
 
 // This program calculates escape velocity according to formula:

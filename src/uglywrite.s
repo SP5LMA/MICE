@@ -1,11 +1,7 @@
 .arch armv7a
 
-
-
-
 .data
 	hello: .ascii "Salut, Mundi!\n"
-
 
 .text
 .global main
