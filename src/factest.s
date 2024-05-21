@@ -6,8 +6,13 @@
 	numeratorD:	.word 1000000
 
 .text
-.global _start
-_start:
+.align	2
+.global	main
+.syntax unified
+.thumb
+.type	main, %function
+.thumb_func
+main:
 // test factorial(7)
 	mov	r0, #4
 	push	{r0}

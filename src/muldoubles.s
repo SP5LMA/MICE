@@ -8,11 +8,13 @@
 	fmt:	.asciz "%.3lf * %.3f = %.3lf\n"
 
 .text
-.global _start
-_start:
-
-	push {fp, lr}
-	add fp, sp, #4
+.align	2
+.global	main
+.syntax unified
+.thumb
+.type	main, %function
+.thumb_func
+main:
 	sub sp, sp, #40
 
 	ldr r0, =val1F
@@ -29,8 +31,7 @@ _start:
 	ldr r0, =fmt
 	bl printf
 
-	sub sp, fp, #4
-	pop {fp, lr}
+	add sp, sp, #40
 
 	mov r0, #EXIT_SUCCESS
 	bl exit

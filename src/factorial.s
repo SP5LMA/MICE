@@ -1,6 +1,12 @@
 .arch armv7a
+
 .text
+.align 2
 .global factorial
+.syntax unified
+.thumb
+.type	factorial, %function
+.thumb_func
 factorial:
 // initialize calculation
 	mov	r1, r0

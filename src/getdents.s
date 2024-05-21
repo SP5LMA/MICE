@@ -17,8 +17,12 @@
 	
 
 .text
-.global _start
-_start:
+.global	main
+.syntax unified
+.thumb
+.type	main, %function
+.thumb_func
+main:
 	bl opendir
 	bl getdents
 	bl showdents
