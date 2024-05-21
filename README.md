@@ -24,6 +24,7 @@ List of sample codes in order of discussion.
 1. basicalu.s - examples of basic arithmetic
 1. factorial.s - factorial function
 1. factest.s - main program to test factorial function
+1. fibonacci.s - recursive and iterative version of Fibonacci series calculation
 
 # Proposed exercise scenaria
 
@@ -139,6 +140,14 @@ Functions are in factorial.s while factest.s is a helper program to test them.
 Analyze factorial function. Test it against extreme cases using the helper program and improve the function within your capabilities.
 
 Write and test a function that will sum results of 1 000 000/n! for n in range from 0 to 10. Constant numeratorD is already declared in .data section, use it. Why using n > 9 is pointless in this case? Can you improve resolution of the result?
+
+ * fibonacci.s
+
+Analyze how recursive version works using the debugger.
+Analyze how iterative version works using the debugger.
+Measure execution times of both versions using the *time* command line program.
+Discuss execution times.
+Find out if this calculation can it be faster.
 
 ## Floating point
 
