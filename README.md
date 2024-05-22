@@ -144,10 +144,17 @@ Write and test a function that will sum results of 1 000 000/n! for n in range f
  * fibonacci.s
 
 Analyze how recursive version works using the debugger.
+
 Analyze how iterative version works using the debugger.
+
 Measure execution times of both versions using the *time* command line program.
+
 Discuss execution times.
-Find out if this calculation can it be faster.
+
+Find out if the Fibonacci number can be calculated faster.
+
+Take out fibonacci calculation functions into a separate file, like in
+factorial example
 
 ## Floating point
 
