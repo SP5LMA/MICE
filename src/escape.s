@@ -15,11 +15,15 @@
 	fmtkms:	.asciz "%.3lf km/s\n"
 
 .text
-.global _start
-_start:
+.align 2
+.syntax unified
+.thumb
 
-	push {fp, lr}
-	add fp, sp, #4
+.global	main
+.type	main, %function
+.thumb_func
+main:
+
 	sub sp, sp, #40
 
 	ldr r0, =G2
@@ -41,8 +45,7 @@ _start:
 	ldr r0, =fmtms
 	bl printf
 
-	sub sp, fp, #4
-	pop {fp, lr}
+	add sp, sp, #40
 
 	mov r0, #EXIT_SUCCESS
 	bl exit

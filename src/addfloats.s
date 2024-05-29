@@ -7,11 +7,18 @@
 	val2F:	.float 3.7
 
 .bss
-	valResultF:	.double
+	.align 2
+	valResultF:	.double 
 
 .text
-.global _start
-_start:
+.align 2
+.syntax unified
+.thumb
+
+.global	main
+.type	main, %function
+.thumb_func
+main:
 	ldr r0, =val1F
 	vldr.f32 s0, [r0]
 	ldr r1, =val2F
