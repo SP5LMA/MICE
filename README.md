@@ -25,6 +25,10 @@ List of sample codes in order of discussion.
 1. factorial.s - factorial function
 1. factest.s - main program to test factorial function
 1. fibonacci.s - recursive and iterative version of Fibonacci series calculation
+1. addfloats.s - add two single-precision floating point values
+1. muldoubles.s - multiply two double-precision floating point values
+1. escape.s - calculate escape velocity from Earth
+1. dotproduct.s - calculate dot product of two vectors
 
 # Proposed exercise scenaria
 
@@ -171,8 +175,11 @@ Using GDB and step-by-step execution observe changes in registers.
  * escape.s
 
 A toy program that for celestial body parameters given in .data section calculates escape velocity from it.
-Modify the program so that it will provide result in [km/s].
+Modify the program so that it will provide result in [km/s] and [km/h].
 
+## NEON
+
+ * dotproduct.s - calculate dot product of two single-precision vectors hard-coded in memory using vector (NEON) instructions
 
 # GDB usage
 
