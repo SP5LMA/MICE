@@ -29,6 +29,7 @@ List of sample codes in order of discussion.
 1. muldoubles.s - multiply two double-precision floating point values
 1. escape.s - calculate escape velocity from Earth
 1. dotproduct.s - calculate dot product of two vectors
+1. crossproduct.s - simple example of cross product calculation
 
 # Proposed exercise scenaria
 
@@ -179,7 +180,18 @@ Modify the program so that it will provide result in [km/s] and [km/h].
 
 ## NEON
 
- * dotproduct.s - calculate dot product of two single-precision vectors hard-coded in memory using vector (NEON) instructions
+ * dotproduct.s
+
+Calculate dot product of two single-precision vectors hard-coded in memory using vector (NEON) instructions.
+Test the code using debugger.
+Turn part of the code that calculates dot product into a function and test it.
+
+ * crossproduct.s
+
+Calculate cross product of two 3-dimensional vectors hard-coded in the memory using vector (NEON) instructions.
+Test the code using debugger.
+Change vext instructions into vrev where applicable.
+Consider calculation of the cross product without vext, vrev etc. but using vld3, vmul, vmls and vstr3 instructions.
 
 # GDB usage
 
