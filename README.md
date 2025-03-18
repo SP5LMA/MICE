@@ -9,13 +9,13 @@ List of sample codes in order of discussion.
 1. gccstarters.s - learn linking with gcc
 1. uglywrite.s - basics of ABI
 1. cleanwrite.s - more programmer-friendly use of syscalls
-1. bitops.s - experiment with different values, practice memory and registers examination
 1. interact.s - basic I/O using kernel syscalls
-1. functions.s - ways to return from function, file interface
-1. functions-errorcontrol.s - add error control to other syscalls
+1. bitops.s - experiment with different values, practice memory and registers examination
 1. loops.s - examples of loops
 1. rhyme-while-do.s - simple while loop with changing text
 1. rhyme-do-while.s - do-while loop with example of post-indexing
+1. functions.s - ways to return from function, file interface
+1. functions-errorcontrol.s - add error control to other syscalls
 1. title.s - Makes A Piece Of Text Looking More Like A Title
 1. libtest.s - test compilation with dynamic library
 1. hello.s - version of interact.s using libc functions
@@ -53,23 +53,16 @@ Compile, link and make the program run. Modify the code and observe outcome. Tes
 
 Analyze the code, figure out what are other functions provided by the kernel. Investigate manuals for C functions corresponding to kernel functions. Compare with "uglywrite.s".
 
- * bitops.s
-
-Revise instructions. Adapt the code with your own test cases. Analyze flags after execution of Boolean operations.
-
  * interact.s
 
 Analyze this interactive program using the command line and using the gdb debugger. Adapt the program so that it "asks" different question. Expand it with another question using additional variables and constant strings.
 
- * functions.s
+ * bitops.s
 
-Examine usage of functions using debugger. Determine what data does it provide.
+Revise instructions. Adapt the code with your own test cases. Analyze flags after execution of Boolean operations.
+
 
 ## Flow control
-
- * functions-errorcontrol.s
-
-Identify differences between this and previous codes. Develop a plan to make this application "crash". Evaluate boundary conditions at which error control takes place using debugger.
 
  * loops.s
 
@@ -82,6 +75,13 @@ Increase number of iterations (add more verses). Change loop from down-counting 
  * rhyme-do-while.s
 
 Investigate post-indexing feature. Can it be used more extensively in the code to traverse the other table? Analyze .data section. Observe that it can be improved in terms of memory usage and implement such change. Can the hard-coded number of loop iterations be improved to version that is counted automatically during compilation? Implement such modification. Add more verses to prove the above change was implemented properly. Change loop from up-counting do down-counting.
+
+ * functions.s
+
+Examine usage of functions using debugger. Determine what data does it provide.
+ * functions-errorcontrol.s
+
+Identify differences between this and previous codes. Develop a plan to make this application "crash". Evaluate boundary conditions at which error control takes place using debugger.
 
  * title.s
 
