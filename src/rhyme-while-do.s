@@ -32,8 +32,13 @@
 
 
 .text
-.global _start
-_start:
+.align	2
+.global	main
+.syntax unified
+.thumb
+.type	main, %function
+.thumb_func
+main:
 // set number of iterations
 	mov	r8, #4 
 // preparation of iterated texts

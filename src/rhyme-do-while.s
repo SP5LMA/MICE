@@ -33,8 +33,13 @@
 	lengths: .word onelen, twolen, threelen, fourlen
 
 .text
-.global _start
-_start:
+.align	2
+.global	main
+.syntax unified
+.thumb
+.type	main, %function
+.thumb_func
+main:
 //set iterator 
 	mov	r8, #0
 // 
