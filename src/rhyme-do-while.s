@@ -2,8 +2,6 @@
 .include "include/syscalls-eabi.s"
 .include "include/consts.s"
 
-.set SYSINFOLEN, 128
-
 .data
 // initial verses
 	rhyme1: .ascii "Hickory dickory dock.\nThe mouse ran up the clock.\nThe clock struck "
