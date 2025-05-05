@@ -20,17 +20,17 @@ List of sample codes in order of discussion.
 1. title.s - Makes A Piece Of Text Looking More Like A Title
 1. libtest.s - test compilation with dynamic library
 1. hello.s - version of interact.s using libc functions
-1. getdents.s - obtain and traverse more complex data structure
-1. cmdargs.s - command line arguments from within "main" function
 1. basicalu.s - examples of basic arithmetic
 1. factorial.s - factorial function
 1. factest.s - main program to test factorial function
+1. cmdargs.s - command line arguments from within "main" function
 1. fibonacci.s - recursive and iterative version of Fibonacci series calculation
 1. addfloats.s - add two single-precision floating point values
 1. muldoubles.s - multiply two double-precision floating point values
 1. escape.s - calculate escape velocity from Earth
 1. dotproduct.s - calculate dot product of two vectors
 1. crossproduct.s - simple example of cross product calculation
+1. getdents.s - obtain and traverse more complex data structure
 
 # Proposed exercise scenaria
 
