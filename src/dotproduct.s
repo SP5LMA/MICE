@@ -1,5 +1,4 @@
-; as -g -mcpu=cortex-a7 -mfloat-abi=hard -mfpu=neon-vfpv4 dotproduct.s -o dotproduct.o
-; gcc -g -znoexecstack dotproduct.o -o dotproduct
+// gcc -g -mcpu=cortex-a7 -mfloat-abi=hard -mfpu=neon-vfpv4 dotproduct.s -o dotproduct.o
 .arch armv7a
 .include "include/consts.s"
 
