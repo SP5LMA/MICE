@@ -129,22 +129,6 @@ Using existing code as an example add another question. Its answer should be sto
 
 Improve the code to avoid buffer overflows.
 
-* getdents.s
-
-Test the program and analyze data structure obtained from getdents function.
-
-Consult getdents manual to understand getdents data structure.
-
-Improve output of the program so that it will print i-node from getdents structure.
-
-Improve output of the program so that it will print type of the file (8 is for "regular" file, 4 is for "directory" and so on). Consult /usr/include/dirent.h and values DT_ defined there for further improvement.
-
-* cmdargs.s
-
-Using command-line arguments becomes non-trivial from the "main" function due to stack frame managament applied by gcc. With this sample it should be easier to tackle the issue.
-
-Thanks to this sample and the getdents.s, it should be possible to prepare a program similar to "ls". It should let user to provide the directory name to be listed in the command line argument.
-
 ## Integer arithmetics
 
 * basicalu.s
@@ -159,20 +143,23 @@ Analyze factorial function. Test it against extreme cases using the helper progr
 
 Write and test a function that will sum results of 1 000 000/n! for n in range from 0 to 10. Constant numeratorD is already declared in .data section, use it. Why using n > 9 is pointless in this case? Can you improve resolution of the result?
 
+## Stack as data buffer
+
+* cmdargs.s
+
+Using command-line arguments becomes non-trivial from the "main" function due to stack frame managament applied by gcc. With this sample it should be easier to tackle the issue.
+
 * fibonacci.s
 
 Analyze how recursive version works using the debugger.
 
 Analyze how iterative version works using the debugger.
 
-Measure execution times of both versions using the *time* command line program.
+Measure and analyse execution times of both versions using the *time* command line program.
 
-Discuss execution times.
+Take out fibonacci calculation functions into a separate file, like in factorial example.
 
-Find out if the Fibonacci number can be calculated faster.
-
-Take out fibonacci calculation functions into a separate file, like in
-factorial example
+Make the program print all intermediary numbers of the Fibonacci series up to n but only if it is started with "-a" option.
 
 ## Floating point
 
@@ -205,6 +192,24 @@ Calculate cross product of two 3-dimensional vectors hard-coded in the memory us
 Test the code using debugger.
 Change vext instructions into vrev where applicable.
 Consider calculation of the cross product without vext, vrev etc. but using vld3, vmul, vmls and vstr3 instructions.
+
+## Extra
+
+* blinky.s
+
+The one and only blinky for RPi using /dev/gpiochip interface.
+
+* getdents.s
+
+Test the program and analyze data structure obtained from getdents function.
+
+Consult getdents manual to understand getdents data structure.
+
+Improve output of the program so that it will print i-node from getdents structure.
+
+Improve output of the program so that it will print type of the file (8 is for "regular" file, 4 is for "directory" and so on). Consult /usr/include/dirent.h and values DT_ defined there for further improvement.
+
+Thanks to the cmdargs.s sample and the getdents.s, it should be possible to prepare a program similar to "ls". It should let user to provide the directory name to be listed in the command line argument.
 
 # GDB usage
 
