@@ -22,8 +22,7 @@ main:
     beq finish
 shift:
     lsrs r2, #1
-    IT cs
-    addcs r0, #1
+    adc r0, r0, #0
     bne shift
     nop
     nop
