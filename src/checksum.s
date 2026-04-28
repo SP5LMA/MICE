@@ -25,8 +25,6 @@ shift:
     adc r0, r0, #0
     bne shift
     nop
-    nop
-    nop
 
 finish:
     mov	r0, #EXIT_SUCCESS
