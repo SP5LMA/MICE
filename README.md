@@ -178,6 +178,10 @@ Using GDB and step-by-step execution observe changes in registers.
 A toy program that for celestial body parameters given in .data section calculates escape velocity from it.
 Modify the program so that it will provide result in [km/s] and [km/h].
 
+Modify the program so that it will ask user for celestial body parameters and then calculate escape velocity.
+
+Modify the program so that celestial body parameters can be provided in command line, using atof() function for conversion.
+
 ## NEON
 
 * dotproduct.s
