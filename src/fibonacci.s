@@ -41,6 +41,7 @@ quiterr:
 .type	fiborecur, %function
 .thumb_func
 // fiborecur(n)
+// fib(n) = fib(n-1) + fib(n-2)
 fiborecur:
 	push {lr}
 	// if (n <= 1) return n;
