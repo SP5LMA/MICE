@@ -70,7 +70,7 @@ _end_fibrec:
 .thumb_func
 // fiboiter(n)
 fiboiter:
-	push {lr}
+	push {r4, lr}
 
 	// base case
 	cmp r0, #1
@@ -86,13 +86,19 @@ fiboiter:
 _fiboite:
 	add r1, r1, #1
 
+    // version: moving window
 	// calculate the next number
 	add r2, r2, r3
-	
-	// swap registers
+	// swap registers (r2, r3) -> (r3, r2)
 	eor r2, r2, r3
 	eor r3, r2, r3
 	eor r2, r2, r3
+    // how to swap registers in more obvious way?
+
+    // version: temporary register
+//    add r4, r2, r3    // next = a+b
+//    mov r2, r3        // a = b
+//    mov r3, r4        // b = next
 
 	cmp r0, r1
 	bne _fiboite
@@ -101,6 +107,6 @@ _fiboite:
 
 
 _end_fiboite:
-	pop {lr}
+	pop {r4, lr}
 	bx lr
 
